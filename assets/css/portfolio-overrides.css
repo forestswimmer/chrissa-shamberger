@@ -1,0 +1,1756 @@
+/* ========================================
+   WORKS GALLERY
+   ======================================== */
+
+/* Make the category filters wrap neatly. */
+#works .portfolio-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 0;
+  list-style: none;
+}
+
+#works .portfolio-filter li {
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Actual buttons inside the existing filter items. */
+#works .portfolio-filter li > button {
+  display: block;
+  padding: 10px 16px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: 1.5;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+#works .portfolio-filter li > button:focus-visible {
+  outline: 3px solid #222;
+  outline-offset: -3px;
+}
+
+/* Consistent thumbnail areas. */
+#works .portfolio-item .card-image {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+#works .portfolio-item .card-image > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#works .portfolio-item .card-image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Card text. */
+#works .portfolio-item .card-content {
+  padding: 24px;
+}
+
+#works .portfolio-item .card-content .card-title {
+  display: block;
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: none;
+}
+
+#works .portfolio-item .project-category {
+  margin: 0 0 14px;
+  color: #666;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+#works .portfolio-item .project-description {
+  margin: 0 0 20px;
+  line-height: 1.7;
+}
+
+#works .portfolio-item .project-link {
+  margin: 0;
+}
+
+#works .portfolio-item .project-link a {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+  #works .portfolio-filter li > button {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+
+  #works .portfolio-item .card-content {
+    padding: 20px;
+  }
+}
+
+/* Compact handwritten name in the navigation */
+
+#header .logo-brand .nav-wordmark {
+  display: block;
+  font-family: "Caveat", cursive;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: nowrap;
+  color: #222;
+} 
+
+
+
+/* Image logo: preserve the former 36px wordmark height. */
+/*#header .logo-brand .nav-logo {
+  display: block;
+  width: auto !important;
+  height: 36px !important;
+  max-width: 180px;
+  max-height: 36px !important;
+  object-fit: contain;
+} */
+
+
+/* Larger logo without increasing its vertical layout footprint. */
+/*#header .logo-brand .nav-logo {
+  display: block;
+  width: auto !important;
+  height: 54px !important;
+  max-width: 240px;
+  max-height: 54px !important;
+  margin-top: -9px;
+  margin-bottom: -9px;
+  object-fit: contain;
+}*/
+
+
+/* Allow the container to display the larger spilled logo */
+#header .logo-brand {
+  overflow: visible !important;
+}
+
+/* 50% larger logo (~81px) with deeper negative margins */
+#header .logo-brand .nav-logo {
+  display: block;
+  width: auto !important;
+  height: 81px !important;
+  max-width: 340px;      /* Increased max-width proportionally so it doesn't squish */
+  max-height: 81px !important;
+  margin-top: -18px;     /* Pulls the top edge up to keep the nav bar height untouched */
+  margin-bottom: -18px;  /* Pulls the bottom edge up */
+  object-fit: contain;
+}
+
+ 
+
+
+
+/* Smaller hero artwork, positioned on the right */
+#home.banner-15 {
+  background-image: url("../img/portfolio/wandering-under-the-wild-light.png") !important;
+  background-size: 445px auto !important;
+  background-position: right 100px top 0 !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  background-color: #f5f5f3;
+}
+
+/* Keep the artwork from taking over smaller screens */
+@media (max-width: 767px) {
+  #home.banner-15 {
+    background-size: 220px auto !important;
+  }
+}
+
+/* Text-focused hero on tablets and phones */
+@media (max-width: 991px) {
+  #home.banner-15 {
+    background-image: none !important;
+    background-color: #f5f5f3 !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding-top: 130px;
+    padding-bottom: 60px;
+  }
+
+  #home.banner-15 .intro-title {
+    font-size: 36px;
+    line-height: 1.15;
+    overflow-wrap: break-word;
+  }
+
+  #home.banner-15 .text-medium {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+}
+
+
+/* ===== START CYAN COLOR TEST ===== */
+
+/*:root {
+  --site-cyan: #00b4d8;*/
+ /* --site-cyan-dark: #007f99; */
+   /* --site-cyan: #0091ad; */
+
+  /* --site-cyan: #48cae4; */
+  
+/*}*/
+
+/* Approved site palette. */
+:root {
+  --site-ink: #291b35;
+  --site-muted: #594a65;
+
+  --site-teal: #79bdb2;
+  --site-teal-dark: #65a99f;
+
+  --site-paper: #f7f5f2;
+  --site-lavender: #eae7ee;
+
+  --site-violet: #654080;
+  --site-violet-hover: #4e2d68;
+
+  --site-link: #593477;
+  --site-link-hover: #41477b;
+
+  --site-border: #d8d0df;
+
+  /* Maintain compatibility with earlier brand rules. */
+  --site-cyan: var(--site-teal);
+  --site-cyan-dark: var(--site-teal-dark);
+}
+
+/* Top navigation background, including its sticky state */
+#header .brand-header,
+#header.sticky .brand-header {
+  background-color: var(--site-cyan) !important;
+}
+
+/* Main brand-colored backgrounds, including the footer */
+.brand-bg {
+  background-color: var(--site-cyan) !important;
+}
+
+/* Keep the lower footer strip a little darker */
+.footer .secondary-footer.brand-bg.darken-2 {
+  background-color: var(--site-cyan-dark) !important;
+}
+
+/* Buttons explicitly using brand or blue background classes */
+.btn.brand-bg,
+.btn.btn-brand,
+.btn.blue,
+.btn-large.blue,
+.btn-floating.blue {
+  background-color: var(--site-cyan) !important;
+  color: #152b33 !important;
+}
+
+/* ===== END CYAN COLOR TEST ===== */
+
+
+/* Readable navigation labels on the cyan header */
+#header .menuzord-menu > li > a {
+  color: #152b33 !important;
+  font-weight: 700;
+}
+
+/* Keep hover and selected labels readable */
+#header .menuzord-menu > li:hover > a,
+#header .menuzord-menu > li.active > a,
+#header .menuzord-menu > li > a:focus {
+  color: #152b33 !important;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+
+/* ===== Readability adjustments ===== */
+
+/* Main reading text on the site's light backgrounds */
+#home p,
+#about p,
+#works .section-sub,
+#works .project-description,
+#main-content p {
+  color: #333333 !important;
+}
+
+/* Smaller supporting text in the gallery and profile */
+#works .project-category,
+#about .author-meta,
+#about .author-meta .title,
+#about .author-meta .contact-value {
+  color: #454545 !important;
+}
+
+/* Hero introduction: darker and slightly more substantial */
+#home .text-medium {
+  font-size: 18px !important;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+/* Main footer: slightly darker than the cyan header */
+footer.footer .primary-footer.brand-bg {
+  background-color: #00a4c5 !important;
+}
+
+/* Copyright strip: slightly darker again */
+footer.footer .secondary-footer.brand-bg.darken-2 {
+  background-color: #0094b2 !important;
+}
+
+/* Clear footer text and links */
+footer.footer .copy-text,
+footer.footer .copy-text a,
+footer.footer .social-link a {
+  color: #ffffff !important;
+}
+
+/* Remove faded copyright text */
+footer.footer .copy-text,
+footer.footer .copy-text a {
+  opacity: 1 !important;
+}
+
+/* Hero artwork on wide screens */
+#home.banner-15 {
+  background-image: url("../img/portfolio/wandering-under-the-wild-light.png") !important;
+  /*background-size: 480px auto !important;
+  background-position:
+    right max(30px, calc((98vw - 1170px) / 2 + 15px))
+    top 0 !important; */
+
+  /* Full-size overlay; artwork scaled to the hero's width. */
+  background-size: 100% 100%, 100% auto !important;
+  background-position: center center, center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  background-color: #f5f5f3;
+}
+
+
+
+
+/* Hide the artwork before the layout becomes crowded */
+@media (max-width: 1199px) {
+  #home.banner-15 {
+    background-image: none !important;
+  }
+}
+
+
+/* Darker labels in the contact form */
+#contact .input-field label,
+#contact .input-field label.active,
+#contact .input-field input:focus + label,
+#contact .input-field textarea:focus + label {
+  color: #454545 !important;
+}
+
+/* Darker text entered into the form */
+#contact .input-field input,
+#contact .input-field textarea {
+  color: #222222 !important;
+}
+
+/* Darker placeholder text, if present */
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: #595959 !important;
+  opacity: 1;
+}
+
+
+/* ========================================
+   FLOATING INTERACTIVE HERO LOGO
+   ======================================== */
+
+#home.hero-immersive .floating-logo-container {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 20px);
+  left: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  pointer-events: none;
+}
+
+#home.hero-immersive .floating-logo-badge {
+  display: inline-block;
+  width: 250px;
+  height: auto;
+  pointer-events: auto;
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
+
+#home.hero-immersive .interactive-logo {
+  display: block;
+  width: 100%;
+  height: 170px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.55));
+}
+
+@media (max-width: 767px) {
+  #home.hero-immersive .floating-logo-container {
+    bottom: calc(100% + 16px);
+  }
+
+ 
+#home.hero-immersive .floating-logo-badge {
+  width: 190px;
+}
+
+#home.hero-immersive .interactive-logo {
+  height: 135px;
+}
+}
+
+
+
+/* ========================================
+   IMMERSIVE HERO
+   Keep after all earlier hero overrides.
+   ======================================== */
+
+
+
+#home.banner-15.hero-immersive {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  width: 100%;
+  height: auto !important;
+  min-height: 100vh !important;
+  min-height: 100svh !important;
+
+  padding: 0 !important;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url("../img/portfolio/wandering-under-the-wild-light.png") !important;
+
+background-size: 100% 100%, 100% auto !important;
+background-position: center center, center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  background-color: #252525 !important;
+}
+
+/* Main text begins approximately one-fifth down the hero.
+   The minimum leaves room for the header and floating logo. */
+
+#home.hero-immersive .hero-content {
+  position: relative;
+  z-index: 1;
+  flex: 1 0 auto;
+  padding-top: max(290px, 24svh);
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+#home.hero-immersive .hero-heading {
+  position: relative;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+#home.hero-immersive .hero-title {
+  margin: 0 0 22px;
+  color: #ffffff !important;
+  font-family: "Fraunces", Georgia, serif !important;
+  font-size: clamp(44px, 5vw, 72px);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: 0;
+  text-transform: none;
+  overflow-wrap: normal;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+#home.hero-immersive .hero-subtitle {
+  max-width: 850px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+/* Keep the Work button at the lower left of the content area. */
+#home.hero-immersive .hero-action {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+  padding-bottom: 48px;
+  text-align: left;
+}
+
+#home.hero-immersive .hero-action .btn {
+  max-width: 100%;
+  margin: 0;
+  white-space: normal;
+}
+
+@media (max-width: 767px) {
+  
+  #home.hero-immersive .hero-content {
+  padding-top: max(255px, 24svh);
+  padding-bottom: 40px;
+}
+
+  /*#home.hero-immersive .hero-title {
+    margin-bottom: 20px;
+    font-size: clamp(2.25rem, 5vw, 2.75rem);
+    
+    line-height: 1.1;
+  }*/
+
+ 
+
+#home.hero-immersive .hero-title {
+  margin-bottom: 20px;
+  font-size: clamp(34px, 8.5vw, 44px);
+  line-height: 1.15;
+}
+
+  #home.hero-immersive .hero-subtitle {
+    max-width: 360px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  #home.hero-immersive .hero-action {
+    padding-bottom: 32px;
+  }
+}
+
+
+/* ========================================
+   ABOUT ME
+   ======================================== */
+
+#about {
+  padding-bottom: 90px;
+}
+
+/* Equal-width columns with matching panel heights. */
+#about .about-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+#about .about-column {
+  display: flex;
+  float: none;
+  width: 50%;
+  min-width: 0;
+}
+
+#about .about-panel {
+  flex: 1 1 auto;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Biography panel. */
+#about .about-text-panel {
+  padding: clamp(24px, 3vw, 44px);
+}
+
+#about #about-title {
+  margin: 0 0 24px;
+  color: #222222;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+#about .about-bio {
+  margin: 0 0 30px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+#about .about-focus-title {
+  margin: 0 0 12px;
+  color: #222222;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+#about .about-focus {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+/* Center the logo without cropping or stretching it. */
+#about .about-logo-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+#about .about-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+}
+
+/* Stack the panels below the desktop column breakpoint. */
+@media (max-width: 991px) {
+  #about .about-column {
+    width: 100%;
+  }
+
+  #about .about-column + .about-column {
+    margin-top: 24px;
+  }
+
+  #about .about-logo {
+    max-width: 480px;
+    max-height: 380px;
+  }
+}
+
+@media (max-width: 767px) {
+  #about {
+    padding-top: 70px;
+    padding-bottom: 60px;
+  }
+
+  #about .about-text-panel {
+    padding: 24px;
+  }
+
+  #about #about-title {
+    font-size: 28px;
+  }
+
+  #about .about-logo-panel {
+    padding: 24px;
+  }
+
+  #about .about-logo {
+    max-height: 300px;
+  }
+}
+
+
+
+/* Shared homepage section-heading typography. */
+#works #works-title,
+#about #about-title,
+#artist-statement #artist-statement-title,
+#experience #experience-title {
+  font-family: "Raleway", sans-serif !important;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (max-width: 767px) {
+  #works #works-title,
+  #about #about-title,
+  #artist-statement #artist-statement-title,
+  #experience #experience-title {
+    font-size: 28px;
+  }
+}
+
+
+/* ========================================
+   ARTIST STATEMENT: SHARED COLOR THEME
+   Change the hex code in --statement-bg ONCE
+   to update both the homepage band and the page!
+   ======================================== */
+:root {
+  --statement-bg: #eae7ee; 
+  /* #e8efe6 is green like image above it, but too many cool colors on site */
+}
+
+/* ========================================
+   ARTIST STATEMENT: HOMEPAGE BAND
+   ======================================== */
+
+.artist-statement-band {
+  padding: 64px 0;
+  background-color: var(--statement-bg) !important;
+  border-top: 1px solid #d5dfdd;
+  border-bottom: 1px solid #d5dfdd;
+}
+
+.statement-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#artist-statement-title,
+.statement-page-title {
+  margin: 0 0 20px;
+  color: #222222;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.statement-placeholder {
+  margin: 0 0 24px;
+  color: #505b58;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* Reset the template's default blockquote treatment. */
+.statement-quote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.statement-quote p {
+  margin: 0;
+  color: #333333;
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.statement-attribution {
+  display: block;
+  margin-top: 18px;
+  color: #505b58;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.artist-statement-band .statement-button {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  margin-top: 30px;
+  padding: 12px 22px;
+  background-color: #173e46;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.5;
+  text-transform: none;
+  white-space: normal;
+}
+
+.artist-statement-band .statement-button:hover,
+.artist-statement-band .statement-button:focus {
+  background-color: #102e34;
+  color: #ffffff;
+}
+
+.artist-statement-band .statement-button:focus-visible,
+.statement-page a:focus-visible {
+  outline: 3px solid #222222;
+  outline-offset: 4px;
+}
+
+
+
+/* ========================================
+   COMPLETE ARTIST STATEMENT PAGE
+   ======================================== */
+
+body.statement-page {
+  margin: 0;
+  background-color: var(--statement-bg) !important;
+  color: #333333;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+
+.statement-page,
+.statement-page * {
+  box-sizing: border-box;
+}
+
+.statement-page-header,
+.statement-page-main,
+.statement-page-footer {
+  width: min(900px, calc(100% - 40px));
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.statement-page-header {
+  padding: 28px 0;
+  border-bottom: 1px solid #d5dfdd;
+}
+
+.statement-page-home,
+.statement-page-return {
+  color: #173e46;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.statement-page-home:hover,
+.statement-page-return:hover {
+  color: #102e34;
+}
+
+.statement-page-main {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.statement-page-title {
+  font-size: clamp(32px, 5vw, 48px);
+}
+
+.statement-page-intro {
+  margin: 0 0 36px;
+  color: #505b58;
+  line-height: 1.7;
+}
+
+.statement-page .statement-quote + .statement-quote {
+  margin-top: 36px;
+  padding-top: 36px;
+  border-top: 1px solid #d5dfdd;
+}
+
+.statement-page-footer {
+  padding-top: 24px;
+  padding-bottom: 32px;
+  border-top: 1px solid #d5dfdd;
+}
+
+@media (max-width: 767px) {
+  .artist-statement-band {
+    padding: 48px 0;
+  }
+
+  #artist-statement-title {
+    font-size: 28px;
+  }
+
+  .statement-quote p {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .statement-page-main {
+    padding-top: 36px;
+    padding-bottom: 40px;
+  }
+}
+
+
+/* ========================================
+   BRIGHT GREEN ARTIST STATEMENT BUTTON
+   ======================================== */
+
+.artist-statement-band .statement-button {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  margin-top: 30px;
+  padding: 12px 24px;
+  /*background-color: #66bb6a !important;*/ /* Bright spring leaf */
+  /*color: #0f2b18 !important;  */           /* Dark forest green for high-contrast readability */
+
+   background-color: #4caf50 !important; /* Bright spring leaf */
+  color: #0f2b18  !important;            /* Dark forest green for high-contrast readability */
+  
+  font-weight: 700;
+  line-height: 1.5;
+  text-transform: none;
+  white-space: normal;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.artist-statement-band .statement-button:hover,
+.artist-statement-band .statement-button:focus {
+  background-color: #52a456 !important; /* Slightly richer green on hover */
+  color: #05140b !important;
+}
+
+
+
+/* ========================================
+   EXPERIENCE
+   ======================================== */
+
+#experience.experience-section {
+  padding: 80px 0;
+  background-color: #f5f5f3;
+  border-bottom: 1px solid #deded8;
+}
+
+#experience .experience-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#experience .experience-title {
+  margin: 0 0 36px;
+  color: #222222;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Keep the supplied education and background text easy to scan. */
+#experience .experience-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 40px;
+}
+
+#experience .experience-group {
+  min-width: 0;
+}
+
+#experience .experience-group h3 {
+  margin: 0 0 16px;
+  color: #222222;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+#experience .experience-group p {
+  margin: 0;
+  color: #333333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+#experience .experience-group .experience-study-note {
+  margin-top: 16px;
+  color: #454545;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Match the green direction established by the statement button. */
+#experience .experience-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+#experience .experience-download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 6px;
+
+  height: auto;
+  min-height: 48px;
+  max-width: 100%;
+  margin: 0;
+  padding: 12px 24px;
+
+  background-color: #4caf50;
+  color: #0f2b18;
+  border-radius: 4px;
+
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: none;
+  white-space: normal;
+
+  transition: background-color 0.2s ease;
+}
+
+#experience .experience-download-button:hover,
+#experience .experience-download-button:focus {
+  background-color: #52a456;
+  color: #05140b;
+}
+
+#experience .experience-download-button:focus-visible {
+  outline: 3px solid #222222;
+  outline-offset: 4px;
+}
+
+#experience .experience-file-type {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@media (max-width: 991px) {
+  #experience .experience-details {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  #experience.experience-section {
+    padding: 56px 0;
+  }
+
+  #experience .experience-title {
+    margin-bottom: 28px;
+    font-size: 28px;
+  }
+
+  #experience .experience-downloads {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 30px;
+  }
+
+  #experience .experience-download-button {
+    width: 100%;
+  }
+}
+
+
+/* ========================================
+   SITE FOOTER
+   ======================================== */
+
+#site-footer .footer-content-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.4fr)
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+  gap: 40px;
+  padding: 48px 0 40px;
+  text-align: left;
+}
+
+#site-footer .footer-col {
+  min-width: 0;
+}
+
+/* Override template nav defaults only inside the footer. */
+#site-footer nav.footer-links-col {
+  height: auto;
+  background: transparent;
+  box-shadow: none;
+  line-height: inherit;
+}
+
+/* Large enough to recognize without dominating the footer. */
+#site-footer .footer-logo-link {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 18px;
+  line-height: 0;
+}
+
+#site-footer .footer-brand-logo {
+  display: block;
+  width: 170px;
+  height: auto;
+  max-width: 100%;
+}
+
+
+
+
+#site-footer .footer-name {
+  display: block;
+  margin-bottom: 10px;
+  color: #152b33 !important;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+
+#site-footer .footer-tagline {
+  max-width: none;
+  margin: 0 0 18px;
+  color: #152b33 !important;
+  font-size: 15px;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+#site-footer .footer-title {
+  margin: 0 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(21, 43, 51, 0.25);
+  color: #152b33 !important;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+#site-footer .footer-contact-list,
+#site-footer .footer-link-list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#site-footer .footer-contact-list li,
+#site-footer .footer-link-list li {
+  float: none;
+  margin: 0 0 10px;
+  padding: 0;
+  color: #152b33;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+#site-footer .footer-contact-list li:last-child,
+#site-footer .footer-link-list li:last-child {
+  margin-bottom: 0;
+}
+
+#site-footer .footer-contact-list a,
+#site-footer .footer-link-list a {
+  display: inline-block;
+  padding: 0;
+  color: #152b33 !important;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+#site-footer .footer-contact-list a:hover,
+#site-footer .footer-link-list a:hover,
+#site-footer .footer-name:hover,
+#site-footer .back-to-top-text:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+#site-footer .footer-bottom-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+#site-footer .copy-text,
+#site-footer .back-to-top-text {
+  color: #152b33 !important;
+  font-size: 13px;
+  line-height: 1.7;
+  opacity: 1 !important;
+}
+
+#site-footer .back-to-top-text {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#site-footer a:focus-visible {
+  outline: 3px solid #152b33;
+  outline-offset: 4px;
+}
+
+@media (max-width: 991px) {
+  #site-footer .footer-content-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+
+  #site-footer .footer-brand-col {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 767px) {
+  #site-footer .footer-content-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    padding-top: 36px;
+    padding-bottom: 32px;
+    text-align: center;
+  }
+
+  #site-footer .footer-brand-col {
+    grid-column: auto;
+  }
+
+  #site-footer .footer-brand-logo {
+    width: 150px;
+  }
+
+  #site-footer .footer-tagline {
+  margin-right: auto;
+  margin-left: auto;
+  white-space: normal;
+}
+
+  #site-footer .footer-bottom-flex {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+
+/* ========================================
+   APPROVED MAIN COLOR SYSTEM
+   Keep after earlier color overrides.
+   ======================================== */
+
+/* Page foundation. */
+body {
+  background-color: var(--site-paper);
+  color: var(--site-ink);
+}
+
+/* Navigation, including the sticky state. */
+#header .brand-header,
+#header.sticky .brand-header {
+  background-color: var(--site-teal) !important;
+}
+
+#header .logo-brand .nav-wordmark,
+#header .menuzord-menu > li > a {
+  color: var(--site-ink) !important;
+}
+
+#header .menuzord-menu > li:hover > a,
+#header .menuzord-menu > li.active > a,
+#header .menuzord-menu > li > a:focus {
+  color: var(--site-ink) !important;
+}
+
+/* Mobile menu-toggle bars. */
+#header .menuzord .showhide em {
+  background-color: var(--site-ink) !important;
+}
+
+/* Main section backgrounds; preserve white content panels. */
+#works.grey.lighten-3,
+#about.grey.lighten-3,
+#contact.grey.lighten-3,
+#experience.experience-section {
+  background-color: var(--site-paper) !important;
+}
+
+/* Main headings. */
+#works #works-title,
+#about #about-title,
+#about .about-focus-title,
+#artist-statement #artist-statement-title,
+#experience #experience-title,
+#experience .experience-group h3,
+.statement-page .statement-page-title {
+  color: var(--site-ink) !important;
+}
+
+/* Main reading text. */
+#works .section-sub,
+#works .project-description,
+#about p,
+#experience .experience-group p,
+.artist-statement-band .statement-quote p,
+body.statement-page,
+.statement-page #main-content p {
+  color: var(--site-ink) !important;
+}
+
+/* Gallery titles and supporting text. */
+#works .portfolio-item .card-content .card-title {
+  color: var(--site-ink) !important;
+}
+
+#works .portfolio-item .project-category,
+#experience .experience-group .experience-study-note,
+.artist-statement-band .statement-placeholder,
+.artist-statement-band .statement-attribution,
+.statement-page .statement-page-intro,
+.statement-page .statement-attribution {
+  color: var(--site-muted) !important;
+}
+
+/* Project links and full-statement-page links. */
+#works .project-link a,
+.statement-page .statement-page-home,
+.statement-page .statement-page-return {
+  color: var(--site-link) !important;
+}
+
+#works .project-link a:hover,
+#works .project-link a:focus,
+.statement-page .statement-page-home:hover,
+.statement-page .statement-page-home:focus,
+.statement-page .statement-page-return:hover,
+.statement-page .statement-page-return:focus {
+  color: var(--site-link-hover) !important;
+}
+
+/* Artist Statement backgrounds and separators. */
+.artist-statement-band,
+body.statement-page {
+  background-color: var(--site-lavender) !important;
+}
+
+.artist-statement-band,
+.statement-page .statement-page-header,
+.statement-page .statement-page-footer,
+.statement-page .statement-quote + .statement-quote,
+#experience.experience-section {
+  border-color: var(--site-border);
+}
+
+/* Contact: colors only; no form layout or behavior changes. */
+#contact .input-field label,
+#contact .input-field label.active,
+#contact .input-field input:focus + label,
+#contact .input-field textarea:focus + label {
+  color: var(--site-muted) !important;
+}
+
+#contact .input-field input,
+#contact .input-field textarea {
+  color: var(--site-ink) !important;
+}
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: var(--site-muted) !important;
+  opacity: 1;
+}
+
+/* Footer backgrounds. */
+#site-footer .primary-footer.brand-bg {
+  background-color: var(--site-teal) !important;
+}
+
+#site-footer .secondary-footer.brand-bg.darken-2 {
+  background-color: var(--site-teal-dark) !important;
+}
+
+/* Footer text and links. */
+#site-footer .footer-name,
+#site-footer .footer-tagline,
+#site-footer .footer-title,
+#site-footer .footer-contact-list li,
+#site-footer .footer-link-list li,
+#site-footer .footer-contact-list a,
+#site-footer .footer-link-list a,
+#site-footer .copy-text,
+#site-footer .back-to-top-text {
+  color: var(--site-ink) !important;
+}
+
+#site-footer .footer-title {
+  border-bottom-color: rgba(41, 27, 53, 0.25);
+}
+
+#site-footer .footer-contact-list a:hover,
+#site-footer .footer-link-list a:hover,
+#site-footer .footer-name:hover,
+#site-footer .back-to-top-text:hover {
+  color: var(--site-link) !important;
+}
+
+/* Recolor existing focus outlines without removing them. */
+#works .portfolio-filter li > button:focus-visible,
+.artist-statement-band .statement-button:focus-visible,
+.statement-page a:focus-visible,
+#experience .experience-download-button:focus-visible,
+#site-footer a:focus-visible {
+  outline-color: var(--site-ink);
+}
+
+
+/* ========================================
+   COORDINATED ACTION BUTTONS
+   ======================================== */
+
+/* Hero, Artist Statement, Experience, and Contact actions. */
+#home.hero-immersive .hero-action .btn,
+#artist-statement .statement-button,
+#experience .experience-download-button,
+#contact button[type="submit"] {
+  background-color: var(--site-violet) !important;
+  color: #ffffff !important;
+
+  border: 0;
+  border-radius: 6px;
+
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: none;
+
+  box-shadow: 0 3px 8px rgba(41, 27, 53, 0.18);
+
+  transition:
+    background-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+/* Keyboard or pointer focus: maintain a clear color response. */
+#home.hero-immersive .hero-action .btn:focus,
+#artist-statement .statement-button:focus,
+#experience .experience-download-button:focus,
+#contact button[type="submit"]:focus {
+  background-color: var(--site-violet-hover) !important;
+  color: #ffffff !important;
+}
+
+/* Mouse hover: restrained lift and deeper shadow.
+   Restrict movement to devices with a precise hover pointer. */
+@media (hover: hover) and (pointer: fine) {
+  #home.hero-immersive .hero-action .btn:hover,
+  #artist-statement .statement-button:hover,
+  #experience .experience-download-button:hover,
+  #contact button[type="submit"]:hover {
+    background-color: var(--site-violet-hover) !important;
+    color: #ffffff !important;
+    box-shadow: 0 7px 16px rgba(41, 27, 53, 0.25);
+    transform: translateY(-2px);
+  }
+}
+
+/* Pressed state. */
+#home.hero-immersive .hero-action .btn:active,
+#artist-statement .statement-button:active,
+#experience .experience-download-button:active,
+#contact button[type="submit"]:active {
+  background-color: #402252 !important;
+  color: #ffffff !important;
+  box-shadow: 0 1px 3px rgba(41, 27, 53, 0.22);
+  transform: translateY(1px);
+}
+
+/* Two-color keyboard indicator for light and dark surroundings. */
+#home.hero-immersive .hero-action .btn:focus-visible,
+#artist-statement .statement-button:focus-visible,
+#experience .experience-download-button:focus-visible,
+#contact button[type="submit"]:focus-visible {
+  outline: 3px solid var(--site-ink) !important;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 4px #ffffff;
+}
+
+/* Footer up-arrow: match the palette without changing
+   its dimensions, placement, or icon animation. */
+#site-footer .back-top {
+  background-color: var(--site-violet) !important;
+  color: #ffffff !important;
+  box-shadow: 0 3px 8px rgba(41, 27, 53, 0.2);
+
+  transition:
+    background-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+#site-footer .back-top .material-icons {
+  color: #ffffff !important;
+}
+
+#site-footer .back-top:hover,
+#site-footer .back-top:focus {
+  background-color: var(--site-violet-hover) !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 14px rgba(41, 27, 53, 0.28);
+}
+
+#site-footer .back-top:active {
+  background-color: #402252 !important;
+}
+
+#site-footer .back-top:focus-visible {
+  outline: 3px solid var(--site-ink) !important;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 4px #ffffff;
+}
+
+/* Respect reduced-motion preferences for these controls.
+   Retain color and outline feedback without movement. */
+@media (prefers-reduced-motion: reduce) {
+  #home.hero-immersive .hero-action .btn,
+  #artist-statement .statement-button,
+  #experience .experience-download-button,
+  #contact button[type="submit"],
+  #site-footer .back-top {
+    transition: none !important;
+    transform: none !important;
+  }
+
+  #site-footer .back-top .material-icons,
+  #site-footer .back-top .material-icons::before,
+  #site-footer .back-top .material-icons::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  #home.hero-immersive .hero-action .btn .waves-ripple,
+  #artist-statement .statement-button .waves-ripple,
+  #experience .experience-download-button .waves-ripple,
+  #contact button[type="submit"] .waves-ripple,
+  #site-footer .back-top .waves-ripple {
+    display: none !important;
+  }
+}
+
+/* ========================================
+   FOOTER REDESIGN: BRAND ROW + THREE COLUMNS
+   ======================================== */
+
+/* Separate the brand from the information columns. */
+
+
+/* One centered footer brand group at every screen size. */
+#site-footer .footer-brand-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 40px 0 30px;
+  border-bottom: 1px solid rgba(41, 27, 53, 0.25);
+  text-align: center;
+}
+
+#site-footer .footer-brand-row .footer-logo-link {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: min(100%, 240px);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  line-height: 0;
+}
+
+#site-footer .footer-brand-row .footer-brand-logo {
+  display: block;
+  width: 240px;
+  height: 175px;
+  max-width: 100%;
+  margin: 0 auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+#site-footer .footer-brand-copy {
+  width: 100%;
+  min-width: 0;
+  text-align: center;
+}
+
+
+
+#site-footer .footer-brand-copy .footer-name {
+  margin: 0 0 8px;
+  font-size: 26px;
+  line-height: 1.25;
+}
+
+#site-footer .footer-brand-copy .footer-tagline {
+  max-width: none;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  white-space: normal;
+}
+
+/* Three aligned information columns.
+   Give Navigation extra room for its two compact groups. */
+#site-footer .footer-content-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr)
+    minmax(0, 1.45fr);
+  align-items: start;
+  gap: 36px;
+  padding: 32px 0 40px;
+  text-align: left;
+}
+
+#site-footer .footer-col {
+  min-width: 0;
+}
+
+#site-footer .footer-title {
+  margin: 0 0 18px;
+  padding-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Match the row spacing across all three columns. */
+#site-footer .footer-contact-list li,
+#site-footer .footer-link-list li {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+#site-footer .footer-contact-list li:last-child,
+#site-footer .footer-link-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Split seven navigation links into groups of four and three. */
+#site-footer .footer-navigation-groups {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  align-items: start;
+  gap: 20px;
+}
+
+/* At medium widths, avoid squeezing the three-column layout.
+   Navigation spans the row below Contact and Focus Areas. */
+@media (min-width: 768px) and (max-width: 1199px) {
+  #site-footer .footer-content-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+
+  #site-footer .footer-content-grid > .footer-col:last-child {
+    grid-column: 1 / -1;
+  }
+
+  #site-footer .footer-navigation-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile: centered brand, then clear left-aligned link groups. */
+@media (max-width: 767px) {
+  #site-footer .footer-brand-row {
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 36px;
+    padding-bottom: 28px;
+    text-align: center;
+  }
+
+   #site-footer .footer-brand-row .footer-brand-logo {
+  width: 200px;
+  height: 150px;
+}
+
+  #site-footer .footer-brand-copy .footer-name {
+    font-size: 24px;
+  }
+
+  #site-footer .footer-brand-copy .footer-tagline {
+    max-width: 340px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #site-footer .footer-content-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    padding-top: 28px;
+    padding-bottom: 32px;
+    text-align: left;
+  }
+
+  #site-footer .footer-navigation-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+/* Very narrow screens: avoid cramped document links. */
+@media (max-width: 359px) {
+  #site-footer .footer-navigation-groups {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+}
+
+/* Keep the interactive logo still when reduced motion is requested. */
+@media (prefers-reduced-motion: reduce) {
+  #home.hero-immersive .floating-logo-badge {
+    transform: none !important;
+    transition: none !important;
+    will-change: auto;
+  }
+}
+
+/* Navigation: visibly purple instead of near-black. */
+#header .logo-brand .nav-wordmark,
+#header .menuzord-menu > li > a {
+  color: #4b245e !important;
+}
+
+#header .menuzord-menu > li:hover > a,
+#header .menuzord-menu > li.active > a,
+#header .menuzord-menu > li > a:focus {
+  color: #352044 !important;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+#header .menuzord .showhide em {
+  background-color: #4b245e !important;
+}
