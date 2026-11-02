@@ -1,0 +1,2871 @@
+/* ========================================
+   WORKS GALLERY
+   ======================================== */
+
+/* Make the category filters wrap neatly. */
+#works .portfolio-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding-left: 0;
+  list-style: none;
+}
+
+#works .portfolio-filter li {
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Actual buttons inside the existing filter items. */
+#works .portfolio-filter li > button {
+  display: block;
+  padding: 10px 16px;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: 1.5;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+#works .portfolio-filter li > button:focus-visible {
+  outline: 3px solid #222;
+  outline-offset: -3px;
+}
+
+/* Consistent thumbnail areas. */
+#works .portfolio-item .card-image {
+  position: relative;
+  height: 260px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+#works .portfolio-item .card-image > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#works .portfolio-item .card-image img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* Card text. */
+#works .portfolio-item .card-content {
+  padding: 24px;
+}
+
+#works .portfolio-item .card-content .card-title {
+  display: block;
+  margin: 0 0 12px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: none;
+}
+
+#works .portfolio-item .project-category {
+  margin: 0 0 14px;
+  color: #666;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+#works .portfolio-item .project-description {
+  margin: 0 0 20px;
+  line-height: 1.7;
+}
+
+#works .portfolio-item .project-link {
+  margin: 0;
+}
+
+#works .portfolio-item .project-link a {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+  #works .portfolio-filter li > button {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+
+  #works .portfolio-item .card-content {
+    padding: 20px;
+  }
+}
+
+/* Compact handwritten name in the navigation */
+
+#header .logo-brand .nav-wordmark {
+  display: block;
+  font-family: "Caveat", cursive;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: nowrap;
+  color: #222;
+} 
+
+
+
+/* Image logo: preserve the former 36px wordmark height. */
+/*#header .logo-brand .nav-logo {
+  display: block;
+  width: auto !important;
+  height: 36px !important;
+  max-width: 180px;
+  max-height: 36px !important;
+  object-fit: contain;
+} */
+
+
+/* Larger logo without increasing its vertical layout footprint. */
+/*#header .logo-brand .nav-logo {
+  display: block;
+  width: auto !important;
+  height: 54px !important;
+  max-width: 240px;
+  max-height: 54px !important;
+  margin-top: -9px;
+  margin-bottom: -9px;
+  object-fit: contain;
+}*/
+
+
+/* Allow the container to display the larger spilled logo */
+#header .logo-brand {
+  overflow: visible !important;
+}
+
+
+
+/* ===== LEGACY COLOR SYSTEM ===== */
+
+/* Approved site palette. */
+:root {
+  --site-ink: #291b35;
+  --site-muted: #594a65;
+
+  --site-teal: #79bdb2;
+  --site-teal-dark: #65a99f;
+
+  --site-paper: #f7f5f2;
+  --site-lavender: #eae7ee;
+
+  --site-violet: #654080;
+  --site-violet-hover: #4e2d68;
+
+  --site-link: #593477;
+  --site-link-hover: #41477b;
+
+  --site-border: #d8d0df;
+
+  /* Maintain compatibility with earlier brand rules. */
+  --site-cyan: var(--site-teal);
+  --site-cyan-dark: var(--site-teal-dark);
+}
+
+/* Top navigation background, including its sticky state */
+#header .brand-header,
+#header.sticky .brand-header {
+  background-color: var(--site-cyan) !important;
+}
+
+/* Main brand-colored backgrounds, including the footer */
+.brand-bg {
+  background-color: var(--site-cyan) !important;
+}
+
+/* Keep the lower footer strip a little darker */
+.footer .secondary-footer.brand-bg.darken-2 {
+  background-color: var(--site-cyan-dark) !important;
+}
+
+/* Buttons explicitly using brand or blue background classes */
+.btn.brand-bg,
+.btn.btn-brand,
+.btn.blue,
+.btn-large.blue,
+.btn-floating.blue {
+  background-color: var(--site-cyan) !important;
+  color: #152b33 !important;
+}
+
+/* ===== END CYAN COLOR TEST ===== */
+
+
+/* Readable navigation labels on the cyan header */
+#header .menuzord-menu > li > a {
+  color: #152b33 !important;
+  font-weight: 700;
+}
+
+/* Keep hover and selected labels readable */
+#header .menuzord-menu > li:hover > a,
+#header .menuzord-menu > li.active > a,
+#header .menuzord-menu > li > a:focus {
+  color: #152b33 !important;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+
+/* ===== Readability adjustments ===== */
+
+/* Main reading text on the site's light backgrounds */
+#home p,
+#about p,
+#works .section-sub,
+#works .project-description,
+#main-content p {
+  color: #333333 !important;
+}
+
+/* Smaller supporting text in the gallery and profile */
+#works .project-category,
+#about .author-meta,
+#about .author-meta .title,
+#about .author-meta .contact-value {
+  color: #454545 !important;
+}
+
+/* Hero introduction: darker and slightly more substantial */
+#home .text-medium {
+  font-size: 18px !important;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+/* Main footer: slightly darker than the cyan header */
+footer.footer .primary-footer.brand-bg {
+  background-color: #00a4c5 !important;
+}
+
+/* Copyright strip: slightly darker again */
+footer.footer .secondary-footer.brand-bg.darken-2 {
+  background-color: #0094b2 !important;
+}
+
+/* Clear footer text and links */
+footer.footer .copy-text,
+footer.footer .copy-text a,
+footer.footer .social-link a {
+  color: #ffffff !important;
+}
+
+/* Remove faded copyright text */
+footer.footer .copy-text,
+footer.footer .copy-text a {
+  opacity: 1 !important;
+}
+
+/* Hero artwork on wide screens */
+#home.banner-15 {
+  background-image: url("../img/portfolio/wandering-under-the-wild-light.png") !important;
+  /*background-size: 480px auto !important;
+  background-position:
+    right max(30px, calc((98vw - 1170px) / 2 + 15px))
+    top 0 !important; */
+
+  /* Full-size overlay; artwork scaled to the hero's width. */
+  background-size: 100% 100%, 100% auto !important;
+  background-position: center center, center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  background-color: #f5f5f3;
+}
+
+
+
+
+/* Darker labels in the contact form */
+#contact .input-field label,
+#contact .input-field label.active,
+#contact .input-field input:focus + label,
+#contact .input-field textarea:focus + label {
+  color: #454545 !important;
+}
+
+/* Darker text entered into the form */
+#contact .input-field input,
+#contact .input-field textarea {
+  color: #222222 !important;
+}
+
+/* Darker placeholder text, if present */
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: #595959 !important;
+  opacity: 1;
+}
+
+
+/* ========================================
+   FLOATING INTERACTIVE HERO LOGO
+   ======================================== */
+
+#home.hero-immersive .floating-logo-container {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 20px);
+  left: 0;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  pointer-events: none;
+}
+
+#home.hero-immersive .floating-logo-badge {
+  display: inline-block;
+  width: 250px;
+  height: auto;
+  pointer-events: auto;
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
+
+#home.hero-immersive .interactive-logo {
+  display: block;
+  width: 100%;
+  height: 170px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(255, 255, 255, 0.55));
+}
+
+@media (max-width: 767px) {
+  #home.hero-immersive .floating-logo-container {
+    bottom: calc(100% + 16px);
+  }
+
+ 
+#home.hero-immersive .floating-logo-badge {
+  width: 190px;
+}
+
+#home.hero-immersive .interactive-logo {
+  height: 135px;
+}
+}
+
+
+
+/* ========================================
+   IMMERSIVE HERO
+   Keep after all earlier hero overrides.
+   ======================================== */
+
+
+
+#home.banner-15.hero-immersive {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  isolation: isolate;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  width: 100%;
+  height: auto !important;
+  min-height: 100vh !important;
+  min-height: 100svh !important;
+
+  padding: 0 !important;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.45),
+      rgba(0, 0, 0, 0.45)
+    ),
+    url("../img/portfolio/wandering-under-the-wild-light.png") !important;
+
+background-size: 100% 100%, 100% auto !important;
+background-position: center center, center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  background-color: #252525 !important;
+}
+
+/* Main text begins approximately one-fifth down the hero.
+   The minimum leaves room for the header and floating logo. */
+
+#home.hero-immersive .hero-content {
+  position: relative;
+  z-index: 1;
+  flex: 1 0 auto;
+  padding-top: max(290px, 24svh);
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+#home.hero-immersive .hero-heading {
+  position: relative;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+#home.hero-immersive .hero-title {
+  margin: 0 0 22px;
+  color: #ffffff !important;
+  font-family: "Fraunces", Georgia, serif !important;
+  font-size: clamp(44px, 5vw, 72px);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: 0;
+  text-transform: none;
+  overflow-wrap: normal;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+#home.hero-immersive .hero-subtitle {
+  max-width: 850px;
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+/* Keep the Work button at the lower left of the content area. */
+#home.hero-immersive .hero-action {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+  padding-bottom: 48px;
+  text-align: left;
+}
+
+#home.hero-immersive .hero-action .btn {
+  max-width: 100%;
+  margin: 0;
+  white-space: normal;
+}
+
+@media (max-width: 767px) {
+  
+  #home.hero-immersive .hero-content {
+  padding-top: max(255px, 24svh);
+  padding-bottom: 40px;
+}
+
+  /*#home.hero-immersive .hero-title {
+    margin-bottom: 20px;
+    font-size: clamp(2.25rem, 5vw, 2.75rem);
+    
+    line-height: 1.1;
+  }*/
+
+ 
+
+#home.hero-immersive .hero-title {
+  margin-bottom: 20px;
+  font-size: clamp(34px, 8.5vw, 44px);
+  line-height: 1.15;
+}
+
+  #home.hero-immersive .hero-subtitle {
+    max-width: 360px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  #home.hero-immersive .hero-action {
+    padding-bottom: 32px;
+  }
+}
+
+
+/* ========================================
+   ABOUT ME
+   ======================================== */
+
+#about {
+  padding-bottom: 90px;
+}
+
+/* Equal-width columns with matching panel heights. */
+#about .about-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+#about .about-column {
+  display: flex;
+  float: none;
+  width: 50%;
+  min-width: 0;
+}
+
+#about .about-panel {
+  flex: 1 1 auto;
+  width: 100%;
+  min-width: 0;
+}
+
+/* Biography panel. */
+#about .about-text-panel {
+  padding: clamp(24px, 3vw, 44px);
+}
+
+#about #about-title {
+  margin: 0 0 24px;
+  color: #222222;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+#about .about-bio {
+  margin: 0 0 30px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+#about .about-focus-title {
+  margin: 0 0 12px;
+  color: #222222;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+#about .about-focus {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+/* Center the logo without cropping or stretching it. */
+#about .about-logo-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+#about .about-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+}
+
+/* Stack the panels below the desktop column breakpoint. */
+@media (max-width: 991px) {
+  #about .about-column {
+    width: 100%;
+  }
+
+  #about .about-column + .about-column {
+    margin-top: 24px;
+  }
+
+  #about .about-logo {
+    max-width: 480px;
+    max-height: 380px;
+  }
+}
+
+@media (max-width: 767px) {
+  #about {
+    padding-top: 70px;
+    padding-bottom: 60px;
+  }
+
+  #about .about-text-panel {
+    padding: 24px;
+  }
+
+  #about #about-title {
+    font-size: 28px;
+  }
+
+  #about .about-logo-panel {
+    padding: 24px;
+  }
+
+  #about .about-logo {
+    max-height: 300px;
+  }
+}
+
+
+
+/* Shared homepage section-heading typography. */
+#works #works-title,
+#about #about-title,
+#artist-statement #artist-statement-title,
+#experience #experience-title {
+  font-family: "Raleway", sans-serif !important;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (max-width: 767px) {
+  #works #works-title,
+  #about #about-title,
+  #artist-statement #artist-statement-title,
+  #experience #experience-title {
+    font-size: 28px;
+  }
+}
+
+
+/* ========================================
+   ARTIST STATEMENT: SHARED COLOR THEME
+   Change the hex code in --statement-bg ONCE
+   to update both the homepage band and the page!
+   ======================================== */
+:root {
+  --statement-bg: #eae7ee; 
+  /* #e8efe6 is green like image above it, but too many cool colors on site */
+}
+
+/* ========================================
+   ARTIST STATEMENT: HOMEPAGE BAND
+   ======================================== */
+
+.artist-statement-band {
+  padding: 64px 0;
+  background-color: var(--statement-bg) !important;
+  border-top: 1px solid #d5dfdd;
+  border-bottom: 1px solid #d5dfdd;
+}
+
+.statement-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#artist-statement-title,
+.statement-page-title {
+  margin: 0 0 20px;
+  color: #222222;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.statement-placeholder {
+  margin: 0 0 24px;
+  color: #505b58;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* Reset the template's default blockquote treatment. */
+.statement-quote {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.statement-quote p {
+  margin: 0;
+  color: #333333;
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+.statement-attribution {
+  display: block;
+  margin-top: 18px;
+  color: #505b58;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.artist-statement-band .statement-button {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  margin-top: 30px;
+  padding: 12px 22px;
+  background-color: #173e46;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.5;
+  text-transform: none;
+  white-space: normal;
+}
+
+.artist-statement-band .statement-button:hover,
+.artist-statement-band .statement-button:focus {
+  background-color: #102e34;
+  color: #ffffff;
+}
+
+.artist-statement-band .statement-button:focus-visible,
+.statement-page a:focus-visible {
+  outline: 3px solid #222222;
+  outline-offset: 4px;
+}
+
+
+
+/* ========================================
+   COMPLETE ARTIST STATEMENT PAGE
+   ======================================== */
+
+body.statement-page {
+  margin: 0;
+  background-color: var(--statement-bg) !important;
+  color: #333333;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+
+.statement-page,
+.statement-page * {
+  box-sizing: border-box;
+}
+
+.statement-page-header,
+.statement-page-main,
+.statement-page-footer {
+  width: min(900px, calc(100% - 40px));
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.statement-page-header {
+  padding: 28px 0;
+  border-bottom: 1px solid #d5dfdd;
+}
+
+.statement-page-home,
+.statement-page-return {
+  color: #173e46;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.statement-page-home:hover,
+.statement-page-return:hover {
+  color: #102e34;
+}
+
+.statement-page-main {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.statement-page-title {
+  font-size: clamp(32px, 5vw, 48px);
+}
+
+.statement-page-intro {
+  margin: 0 0 36px;
+  color: #505b58;
+  line-height: 1.7;
+}
+
+.statement-page .statement-quote + .statement-quote {
+  margin-top: 36px;
+  padding-top: 36px;
+  border-top: 1px solid #d5dfdd;
+}
+
+.statement-page-footer {
+  padding-top: 24px;
+  padding-bottom: 32px;
+  border-top: 1px solid #d5dfdd;
+}
+
+@media (max-width: 767px) {
+  .artist-statement-band {
+    padding: 48px 0;
+  }
+
+  #artist-statement-title {
+    font-size: 28px;
+  }
+
+  .statement-quote p {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .statement-page-main {
+    padding-top: 36px;
+    padding-bottom: 40px;
+  }
+}
+
+
+/* ========================================
+   BRIGHT GREEN ARTIST STATEMENT BUTTON
+   ======================================== */
+
+.artist-statement-band .statement-button {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  margin-top: 30px;
+  padding: 12px 24px;
+  /*background-color: #66bb6a !important;*/ /* Bright spring leaf */
+  /*color: #0f2b18 !important;  */           /* Dark forest green for high-contrast readability */
+
+   background-color: #4caf50 !important; /* Bright spring leaf */
+  color: #0f2b18  !important;            /* Dark forest green for high-contrast readability */
+  
+  font-weight: 700;
+  line-height: 1.5;
+  text-transform: none;
+  white-space: normal;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.artist-statement-band .statement-button:hover,
+.artist-statement-band .statement-button:focus {
+  background-color: #52a456 !important; /* Slightly richer green on hover */
+  color: #05140b !important;
+}
+
+
+
+/* ========================================
+   EXPERIENCE
+   ======================================== */
+
+#experience.experience-section {
+  padding: 80px 0;
+  background-color: #f5f5f3;
+  border-bottom: 1px solid #deded8;
+}
+
+#experience .experience-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#experience .experience-title {
+  margin: 0 0 36px;
+  color: #222222;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Keep the supplied education and background text easy to scan. */
+#experience .experience-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 40px;
+}
+
+#experience .experience-group {
+  min-width: 0;
+}
+
+#experience .experience-group h3 {
+  margin: 0 0 16px;
+  color: #222222;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+#experience .experience-group p {
+  margin: 0;
+  color: #333333;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+#experience .experience-group .experience-study-note {
+  margin-top: 16px;
+  color: #454545;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Match the green direction established by the statement button. */
+#experience .experience-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+#experience .experience-download-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 6px;
+
+  height: auto;
+  min-height: 48px;
+  max-width: 100%;
+  margin: 0;
+  padding: 12px 24px;
+
+  background-color: #4caf50;
+  color: #0f2b18;
+  border-radius: 4px;
+
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: none;
+  white-space: normal;
+
+  transition: background-color 0.2s ease;
+}
+
+#experience .experience-download-button:hover,
+#experience .experience-download-button:focus {
+  background-color: #52a456;
+  color: #05140b;
+}
+
+#experience .experience-download-button:focus-visible {
+  outline: 3px solid #222222;
+  outline-offset: 4px;
+}
+
+#experience .experience-file-type {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+@media (max-width: 991px) {
+  #experience .experience-details {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  #experience.experience-section {
+    padding: 56px 0;
+  }
+
+  #experience .experience-title {
+    margin-bottom: 28px;
+    font-size: 28px;
+  }
+
+  #experience .experience-downloads {
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 30px;
+  }
+
+  #experience .experience-download-button {
+    width: 100%;
+  }
+}
+
+
+/* ========================================
+   SITE FOOTER
+   ======================================== */
+
+#site-footer .footer-content-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.4fr)
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+  gap: 40px;
+  padding: 48px 0 40px;
+  text-align: left;
+}
+
+#site-footer .footer-col {
+  min-width: 0;
+}
+
+/* Override template nav defaults only inside the footer. */
+#site-footer nav.footer-links-col {
+  height: auto;
+  background: transparent;
+  box-shadow: none;
+  line-height: inherit;
+}
+
+/* Large enough to recognize without dominating the footer. */
+#site-footer .footer-logo-link {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 18px;
+  line-height: 0;
+}
+
+#site-footer .footer-brand-logo {
+  display: block;
+  width: 170px;
+  height: auto;
+  max-width: 100%;
+}
+
+
+
+
+#site-footer .footer-name {
+  display: block;
+  margin-bottom: 10px;
+  color: #152b33 !important;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+
+#site-footer .footer-tagline {
+  max-width: none;
+  margin: 0 0 18px;
+  color: #152b33 !important;
+  font-size: 15px;
+  line-height: 1.6;
+  white-space: nowrap;
+}
+
+#site-footer .footer-title {
+  margin: 0 0 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(21, 43, 51, 0.25);
+  color: #152b33 !important;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+#site-footer .footer-contact-list,
+#site-footer .footer-link-list {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#site-footer .footer-contact-list li,
+#site-footer .footer-link-list li {
+  float: none;
+  margin: 0 0 10px;
+  padding: 0;
+  color: #152b33;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+#site-footer .footer-contact-list li:last-child,
+#site-footer .footer-link-list li:last-child {
+  margin-bottom: 0;
+}
+
+#site-footer .footer-contact-list a,
+#site-footer .footer-link-list a {
+  display: inline-block;
+  padding: 0;
+  color: #152b33 !important;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+#site-footer .footer-contact-list a:hover,
+#site-footer .footer-link-list a:hover,
+#site-footer .footer-name:hover,
+#site-footer .back-to-top-text:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+#site-footer .footer-bottom-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+#site-footer .copy-text,
+#site-footer .back-to-top-text {
+  color: #152b33 !important;
+  font-size: 13px;
+  line-height: 1.7;
+  opacity: 1 !important;
+}
+
+#site-footer .back-to-top-text {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#site-footer a:focus-visible {
+  outline: 3px solid #152b33;
+  outline-offset: 4px;
+}
+
+@media (max-width: 991px) {
+  #site-footer .footer-content-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+
+  #site-footer .footer-brand-col {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 767px) {
+  #site-footer .footer-content-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    padding-top: 36px;
+    padding-bottom: 32px;
+    text-align: center;
+  }
+
+  #site-footer .footer-brand-col {
+    grid-column: auto;
+  }
+
+  #site-footer .footer-brand-logo {
+    width: 150px;
+  }
+
+  #site-footer .footer-tagline {
+  margin-right: auto;
+  margin-left: auto;
+  white-space: normal;
+}
+
+  #site-footer .footer-bottom-flex {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+
+/* ========================================
+   APPROVED MAIN COLOR SYSTEM
+   Keep after earlier color overrides.
+   ======================================== */
+
+/* Page foundation. */
+body {
+  background-color: var(--site-paper);
+  color: var(--site-ink);
+}
+
+/* Navigation, including the sticky state. */
+#header .brand-header,
+#header.sticky .brand-header {
+  background-color: var(--site-teal) !important;
+}
+
+#header .logo-brand .nav-wordmark,
+#header .menuzord-menu > li > a {
+  color: var(--site-ink) !important;
+}
+
+#header .menuzord-menu > li:hover > a,
+#header .menuzord-menu > li.active > a,
+#header .menuzord-menu > li > a:focus {
+  color: var(--site-ink) !important;
+}
+
+/* Mobile menu-toggle bars. */
+#header .menuzord .showhide em {
+  background-color: var(--site-ink) !important;
+}
+
+/* Main section backgrounds; preserve white content panels. */
+#works.grey.lighten-3,
+#about.grey.lighten-3,
+#contact.grey.lighten-3,
+#experience.experience-section {
+  background-color: var(--site-paper) !important;
+}
+
+/* Main headings. */
+#works #works-title,
+#about #about-title,
+#about .about-focus-title,
+#artist-statement #artist-statement-title,
+#experience #experience-title,
+#experience .experience-group h3,
+.statement-page .statement-page-title {
+  color: var(--site-ink) !important;
+}
+
+/* Main reading text. */
+#works .section-sub,
+#works .project-description,
+#about p,
+#experience .experience-group p,
+.artist-statement-band .statement-quote p,
+body.statement-page,
+.statement-page #main-content p {
+  color: var(--site-ink) !important;
+}
+
+/* Gallery titles and supporting text. */
+#works .portfolio-item .card-content .card-title {
+  color: var(--site-ink) !important;
+}
+
+#works .portfolio-item .project-category,
+#experience .experience-group .experience-study-note,
+.artist-statement-band .statement-placeholder,
+.artist-statement-band .statement-attribution,
+.statement-page .statement-page-intro,
+.statement-page .statement-attribution {
+  color: var(--site-muted) !important;
+}
+
+/* Project links and full-statement-page links. */
+#works .project-link a,
+.statement-page .statement-page-home,
+.statement-page .statement-page-return {
+  color: var(--site-link) !important;
+}
+
+#works .project-link a:hover,
+#works .project-link a:focus,
+.statement-page .statement-page-home:hover,
+.statement-page .statement-page-home:focus,
+.statement-page .statement-page-return:hover,
+.statement-page .statement-page-return:focus {
+  color: var(--site-link-hover) !important;
+}
+
+/* Artist Statement backgrounds and separators. */
+.artist-statement-band,
+body.statement-page {
+  background-color: var(--site-lavender) !important;
+}
+
+.artist-statement-band,
+.statement-page .statement-page-header,
+.statement-page .statement-page-footer,
+.statement-page .statement-quote + .statement-quote,
+#experience.experience-section {
+  border-color: var(--site-border);
+}
+
+/* Contact: colors only; no form layout or behavior changes. */
+#contact .input-field label,
+#contact .input-field label.active,
+#contact .input-field input:focus + label,
+#contact .input-field textarea:focus + label {
+  color: var(--site-muted) !important;
+}
+
+#contact .input-field input,
+#contact .input-field textarea {
+  color: var(--site-ink) !important;
+}
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: var(--site-muted) !important;
+  opacity: 1;
+}
+
+/* Footer backgrounds. */
+#site-footer .primary-footer.brand-bg {
+  background-color: var(--site-teal) !important;
+}
+
+#site-footer .secondary-footer.brand-bg.darken-2 {
+  background-color: var(--site-teal-dark) !important;
+}
+
+/* Footer text and links. */
+#site-footer .footer-name,
+#site-footer .footer-tagline,
+#site-footer .footer-title,
+#site-footer .footer-contact-list li,
+#site-footer .footer-link-list li,
+#site-footer .footer-contact-list a,
+#site-footer .footer-link-list a,
+#site-footer .copy-text,
+#site-footer .back-to-top-text {
+  color: var(--site-ink) !important;
+}
+
+#site-footer .footer-title {
+  border-bottom-color: rgba(41, 27, 53, 0.25);
+}
+
+#site-footer .footer-contact-list a:hover,
+#site-footer .footer-link-list a:hover,
+#site-footer .footer-name:hover,
+#site-footer .back-to-top-text:hover {
+  color: var(--site-link) !important;
+}
+
+/* Recolor existing focus outlines without removing them. */
+#works .portfolio-filter li > button:focus-visible,
+.artist-statement-band .statement-button:focus-visible,
+.statement-page a:focus-visible,
+#experience .experience-download-button:focus-visible,
+#site-footer a:focus-visible {
+  outline-color: var(--site-ink);
+}
+
+
+/* ========================================
+   COORDINATED ACTION BUTTONS
+   ======================================== */
+
+/* Hero, Artist Statement, Experience, and Contact actions. */
+#home.hero-immersive .hero-action .btn,
+#artist-statement .statement-button,
+#experience .experience-download-button,
+#contact button[type="submit"] {
+  background-color: var(--site-violet) !important;
+  color: #ffffff !important;
+
+  border: 0;
+  border-radius: 6px;
+
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: none;
+
+  box-shadow: 0 3px 8px rgba(41, 27, 53, 0.18);
+
+  transition:
+    background-color 0.18s ease,
+    box-shadow 0.18s ease,
+    transform 0.18s ease;
+}
+
+/* Keyboard or pointer focus: maintain a clear color response. */
+#home.hero-immersive .hero-action .btn:focus,
+#artist-statement .statement-button:focus,
+#experience .experience-download-button:focus,
+#contact button[type="submit"]:focus {
+  background-color: var(--site-violet-hover) !important;
+  color: #ffffff !important;
+}
+
+/* Mouse hover: restrained lift and deeper shadow.
+   Restrict movement to devices with a precise hover pointer. */
+@media (hover: hover) and (pointer: fine) {
+  #home.hero-immersive .hero-action .btn:hover,
+  #artist-statement .statement-button:hover,
+  #experience .experience-download-button:hover,
+  #contact button[type="submit"]:hover {
+    background-color: var(--site-violet-hover) !important;
+    color: #ffffff !important;
+    box-shadow: 0 7px 16px rgba(41, 27, 53, 0.25);
+    transform: translateY(-2px);
+  }
+}
+
+/* Pressed state. */
+#home.hero-immersive .hero-action .btn:active,
+#artist-statement .statement-button:active,
+#experience .experience-download-button:active,
+#contact button[type="submit"]:active {
+  background-color: #402252 !important;
+  color: #ffffff !important;
+  box-shadow: 0 1px 3px rgba(41, 27, 53, 0.22);
+  transform: translateY(1px);
+}
+
+/* Two-color keyboard indicator for light and dark surroundings. */
+#home.hero-immersive .hero-action .btn:focus-visible,
+#artist-statement .statement-button:focus-visible,
+#experience .experience-download-button:focus-visible,
+#contact button[type="submit"]:focus-visible {
+  outline: 3px solid var(--site-ink) !important;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 4px #ffffff;
+}
+
+/* Footer up-arrow: match the palette without changing
+   its dimensions, placement, or icon animation. */
+#site-footer .back-top {
+  background-color: var(--site-violet) !important;
+  color: #ffffff !important;
+  box-shadow: 0 3px 8px rgba(41, 27, 53, 0.2);
+
+  transition:
+    background-color 0.18s ease,
+    box-shadow 0.18s ease;
+}
+
+#site-footer .back-top .material-icons {
+  color: #ffffff !important;
+}
+
+#site-footer .back-top:hover,
+#site-footer .back-top:focus {
+  background-color: var(--site-violet-hover) !important;
+  color: #ffffff !important;
+  box-shadow: 0 6px 14px rgba(41, 27, 53, 0.28);
+}
+
+#site-footer .back-top:active {
+  background-color: #402252 !important;
+}
+
+#site-footer .back-top:focus-visible {
+  outline: 3px solid var(--site-ink) !important;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 4px #ffffff;
+}
+
+/* Respect reduced-motion preferences for these controls.
+   Retain color and outline feedback without movement. */
+@media (prefers-reduced-motion: reduce) {
+  #home.hero-immersive .hero-action .btn,
+  #artist-statement .statement-button,
+  #experience .experience-download-button,
+  #contact button[type="submit"],
+  #site-footer .back-top {
+    transition: none !important;
+    transform: none !important;
+  }
+
+  #site-footer .back-top .material-icons,
+  #site-footer .back-top .material-icons::before,
+  #site-footer .back-top .material-icons::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  #home.hero-immersive .hero-action .btn .waves-ripple,
+  #artist-statement .statement-button .waves-ripple,
+  #experience .experience-download-button .waves-ripple,
+  #contact button[type="submit"] .waves-ripple,
+  #site-footer .back-top .waves-ripple {
+    display: none !important;
+  }
+}
+
+/* ========================================
+   FOOTER REDESIGN: BRAND ROW + THREE COLUMNS
+   ======================================== */
+
+/* Separate the brand from the information columns. */
+
+
+/* One centered footer brand group at every screen size. */
+#site-footer .footer-brand-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 40px 0 30px;
+  border-bottom: 1px solid rgba(41, 27, 53, 0.25);
+  text-align: center;
+}
+
+#site-footer .footer-brand-row .footer-logo-link {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  width: min(100%, 240px);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  line-height: 0;
+}
+
+#site-footer .footer-brand-row .footer-brand-logo {
+  display: block;
+  width: 240px;
+  height: 175px;
+  max-width: 100%;
+  margin: 0 auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+#site-footer .footer-brand-copy {
+  width: 100%;
+  min-width: 0;
+  text-align: center;
+}
+
+
+
+#site-footer .footer-brand-copy .footer-name {
+  margin: 0 0 8px;
+  font-size: 26px;
+  line-height: 1.25;
+}
+
+#site-footer .footer-brand-copy .footer-tagline {
+  max-width: none;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  white-space: normal;
+}
+
+/* Three aligned information columns.
+   Give Navigation extra room for its two compact groups. */
+#site-footer .footer-content-grid {
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr)
+    minmax(0, 1.45fr);
+  align-items: start;
+  gap: 36px;
+  padding: 32px 0 40px;
+  text-align: left;
+}
+
+#site-footer .footer-col {
+  min-width: 0;
+}
+
+#site-footer .footer-title {
+  margin: 0 0 18px;
+  padding-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Match the row spacing across all three columns. */
+#site-footer .footer-contact-list li,
+#site-footer .footer-link-list li {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+#site-footer .footer-contact-list li:last-child,
+#site-footer .footer-link-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Split seven navigation links into groups of four and three. */
+#site-footer .footer-navigation-groups {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  align-items: start;
+  gap: 20px;
+}
+
+/* At medium widths, avoid squeezing the three-column layout.
+   Navigation spans the row below Contact and Focus Areas. */
+@media (min-width: 768px) and (max-width: 1199px) {
+  #site-footer .footer-content-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+
+  #site-footer .footer-content-grid > .footer-col:last-child {
+    grid-column: 1 / -1;
+  }
+
+  #site-footer .footer-navigation-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile: centered brand, then clear left-aligned link groups. */
+@media (max-width: 767px) {
+  #site-footer .footer-brand-row {
+    flex-direction: column;
+    gap: 16px;
+    padding-top: 36px;
+    padding-bottom: 28px;
+    text-align: center;
+  }
+
+   #site-footer .footer-brand-row .footer-brand-logo {
+  width: 200px;
+  height: 150px;
+}
+
+  #site-footer .footer-brand-copy .footer-name {
+    font-size: 24px;
+  }
+
+  #site-footer .footer-brand-copy .footer-tagline {
+    max-width: 340px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #site-footer .footer-content-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    padding-top: 28px;
+    padding-bottom: 32px;
+    text-align: left;
+  }
+
+  #site-footer .footer-navigation-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+
+/* Very narrow screens: avoid cramped document links. */
+@media (max-width: 359px) {
+  #site-footer .footer-navigation-groups {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+}
+
+/* Keep the interactive logo still when reduced motion is requested. */
+@media (prefers-reduced-motion: reduce) {
+  #home.hero-immersive .floating-logo-badge {
+    transform: none !important;
+    transition: none !important;
+    will-change: auto;
+  }
+}
+
+/* Navigation: visibly purple instead of near-black. */
+#header .logo-brand .nav-wordmark,
+#header .menuzord-menu > li > a {
+  color: #4b245e !important;
+}
+
+#header .menuzord-menu > li:hover > a,
+#header .menuzord-menu > li.active > a,
+#header .menuzord-menu > li > a:focus {
+  color: #352044 !important;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+#header .menuzord .showhide em {
+  background-color: #4b245e !important;
+}
+
+
+/* ========================================
+   LANTERN V2 — NAVIGATION GEODE SIZE
+   ======================================== */
+
+body.lantern-theme #header .logo-brand {
+  display: inline-flex;
+  align-items: center;
+  max-width: calc(100% - 90px);
+  margin: 10px 24px 10px 0 !important;
+  padding: 0 !important;
+  line-height: 1;
+  overflow: visible !important;
+}
+
+/* Replace the old oversized logo and negative margins. */
+body.lantern-theme #header .logo-brand .nav-logo {
+  display: block;
+  width: 180px !important;
+  height: 56px !important;
+  max-width: 100%;
+  max-height: 56px !important;
+  margin: 0 !important;
+  object-fit: contain;
+  object-position: left center;
+}
+
+@media (max-width: 767px) {
+  body.lantern-theme #header .logo-brand {
+    margin: 10px 16px 10px 0 !important;
+  }
+
+  body.lantern-theme #header .logo-brand .nav-logo {
+    width: 145px !important;
+    height: 48px !important;
+    max-height: 48px !important;
+  }
+}
+
+/* ========================================
+   LANTERN HERO — CURRENT WORKING VERSION
+   Keep this block at the bottom of the file.
+   ======================================== */
+
+/* Background and overall hero layout. */
+#home.banner-15.hero-immersive.hero-lantern.hero-lantern {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  isolation: isolate;
+  overflow: hidden;
+  box-sizing: border-box;
+
+  width: 100%;
+  height: auto !important;
+  min-height: 100vh !important;
+  min-height: 100svh !important;
+
+  padding: 0 !important;
+
+  background-image:
+    url("../img/hero/lantern-night.jpg") !important;
+  background-size: cover !important;
+  background-position: 65% center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
+  background-color: #111820 !important;
+}
+
+/* Darken the left side for readable text.
+   Keep the right side lighter to reveal the lantern. */
+#home.hero-immersive.hero-lantern.hero-lantern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(8, 14, 20, 0.86) 0%,
+      rgba(8, 14, 20, 0.68) 38%,
+      rgba(8, 14, 20, 0.20) 72%,
+      rgba(8, 14, 20, 0.10) 100%
+    );
+}
+
+/* Remove any separate template overlay. */
+#home.hero-immersive.hero-lantern.hero-lantern::after {
+  content: none !important;
+}
+
+/* Name and subtitle area. */
+#home.hero-immersive.hero-lantern.hero-lantern .hero-content {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+
+  padding-top: 180px !important;
+  padding-bottom: 0 !important;
+
+  text-align: left;
+}
+
+#home.hero-immersive.hero-lantern.hero-lantern .hero-heading {
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  margin: 0;
+}
+
+/* Name. */
+#home.hero-immersive.hero-lantern.hero-lantern .hero-title {
+  margin: 0 0 24px;
+  color: #fff8ec !important;
+
+  font-family: "Fraunces", Georgia, serif !important;
+  font-size: clamp(44px, 5.2vw, 72px);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: 0;
+  text-transform: none;
+  overflow-wrap: normal;
+
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+}
+
+/* Professional subtitle. */
+#home.hero-immersive.hero-lantern.hero-lantern .hero-subtitle {
+  max-width: 560px;
+  margin: 0;
+
+  color: #f8f4e3 !important;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.55);
+}
+
+/* Button area. */
+#home.hero-immersive.hero-lantern.hero-lantern .hero-action {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+
+  padding-top: 32px !important;
+  padding-bottom: 90px !important;
+
+  text-align: left;
+}
+
+/* Warm lantern-colored hero button. */
+#home.hero-immersive.hero-lantern.hero-lantern .hero-action .btn {
+  display: inline-block;
+  height: auto;
+  min-height: 48px;
+  max-width: 100%;
+
+  margin: 0;
+  padding: 12px 24px;
+
+  background-color: #c88b3a !important;
+  color: #17202a !important;
+
+  border: 2px solid transparent;
+  border-radius: 6px;
+
+  font-weight: 700;
+  line-height: 1.5;
+  text-decoration: none;
+  text-transform: none;
+  white-space: normal;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+#home.hero-immersive.hero-lantern.hero-lantern .hero-action .btn:hover,
+#home.hero-immersive.hero-lantern.hero-lantern .hero-action .btn:focus {
+  background-color: #d8a151 !important;
+  color: #17202a !important;
+}
+
+#home.hero-immersive.hero-lantern.hero-lantern .hero-action .btn:active {
+  background-color: #b77a2e !important;
+  color: #17202a !important;
+}
+
+#home.hero-immersive.hero-lantern.hero-lantern .hero-action .btn:focus-visible {
+  outline: 3px solid #17202a !important;
+  outline-offset: 5px;
+  box-shadow: 0 0 0 5px #fff8ec;
+}
+
+/* Tablet. */
+@media (max-width: 991px) {
+  #home.hero-immersive.hero-lantern.hero-lantern .hero-content {
+    padding-top: 155px !important;
+  }
+
+  #home.hero-immersive.hero-lantern.hero-lantern .hero-action {
+    padding-bottom: 70px !important;
+  }
+}
+
+/* Mobile: keep the lantern background visible. */
+@media (max-width: 767px) {
+  #home.banner-15.hero-immersive.hero-lantern.hero-lantern {
+    background-position: 62% center !important;
+  }
+
+  #home.hero-immersive.hero-lantern.hero-lantern::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(8, 14, 20, 0.40) 0%,
+        rgba(8, 14, 20, 0.65) 45%,
+        rgba(8, 14, 20, 0.82) 100%
+      );
+  }
+
+  #home.hero-immersive.hero-lantern.hero-lantern .hero-content {
+    padding-top: 145px !important;
+  }
+
+  #home.hero-immersive.hero-lantern.hero-lantern .hero-title {
+    margin-bottom: 20px;
+    font-size: clamp(36px, 9vw, 48px);
+    line-height: 1.15;
+  }
+
+  #home.hero-immersive.hero-lantern.hero-lantern .hero-subtitle {
+    max-width: 360px;
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  #home.hero-immersive.hero-lantern.hero-lantern .hero-action {
+    padding-top: 28px !important;
+    padding-bottom: 55px !important;
+  }
+}
+
+/* ========================================
+   HERO IMAGE FIT TEST — SHOW ENTIRE IMAGE
+   ======================================== */
+
+#home.banner-15.hero-immersive.hero-lantern.hero-lantern {
+  background-size: contain !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-color: #111820 !important;
+}
+
+/* Keep the complete image visible on mobile too. */
+@media (max-width: 767px) {
+  #home.banner-15.hero-immersive.hero-lantern.hero-lantern {
+    background-size: contain !important;
+    background-position: center center !important;
+  }
+}
+
+
+/* ========================================
+   HERO REFINEMENT — BLUE-VIOLET AND SPACING
+   ======================================== */
+
+/* Color surrounding the contained image. */
+#home.banner-15.hero-immersive.hero-lantern.hero-lantern {
+  background-color: #141122 !important;
+}
+
+/* Match the overlay to the blue-violet background. */
+#home.hero-immersive.hero-lantern.hero-lantern::before {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20, 17, 34, 0.78) 0%,
+      rgba(20, 17, 34, 0.56) 38%,
+      rgba(20, 17, 34, 0.16) 72%,
+      rgba(20, 17, 34, 0.08) 100%
+    );
+}
+
+/* Move the name, subtitle, and button farther inward.
+   Keep the button aligned with the text. */
+#home.hero-immersive.hero-lantern.hero-lantern .hero-content,
+#home.hero-immersive.hero-lantern.hero-lantern .hero-action {
+  box-sizing: border-box;
+  padding-left: 65px !important;
+  padding-right: 35px !important;
+}
+
+/* Smaller inset on tablets. */
+@media (max-width: 991px) {
+  #home.hero-immersive.hero-lantern.hero-lantern .hero-content,
+  #home.hero-immersive.hero-lantern.hero-lantern .hero-action {
+    padding-left: 40px !important;
+    padding-right: 30px !important;
+  }
+}
+
+/* Mobile: preserve room for the text. */
+@media (max-width: 767px) {
+  #home.hero-immersive.hero-lantern.hero-lantern .hero-content,
+  #home.hero-immersive.hero-lantern.hero-lantern .hero-action {
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+
+  #home.hero-immersive.hero-lantern.hero-lantern::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(20, 17, 34, 0.35) 0%,
+        rgba(20, 17, 34, 0.58) 45%,
+        rgba(20, 17, 34, 0.78) 100%
+      );
+  }
+}
+
+/* ========================================
+   HERO BUTTON — MUTED ORCHID
+   ======================================== *//* ========================================
+   HERO BUTTON — PAINTING PURPLE
+   ======================================== */
+
+#home.hero-immersive.hero-lantern.hero-lantern .hero-action .btn {
+  background-color: #715f89 !important;
+  color: #ffffff !important;
+
+  border: 2px solid transparent;
+  border-radius: 6px;
+
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: none;
+
+  box-shadow: none !important;
+  transform: none !important;
+
+  transition: background-color 0.18s ease;
+}
+
+#home.hero-immersive.hero-lantern.hero-lantern .hero-action .btn:hover,
+#home.hero-immersive.hero-lantern.hero-lantern .hero-action .btn:focus {
+  background-color: #65537d !important;
+  color: #ffffff !important;
+
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+#home.hero-immersive.hero-lantern.hero-lantern .hero-action .btn:active {
+  background-color: #57466e !important;
+  color: #ffffff !important;
+
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+#home.hero-immersive.hero-lantern.hero-lantern .hero-action .btn:focus-visible {
+  outline: 3px solid #ffffff !important;
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #home.hero-immersive.hero-lantern.hero-lantern .hero-action .btn {
+    transition: none !important;
+  }
+}
+
+
+/* ========================================
+   RESTORED INTERACTIVE BLACK-AND-WHITE LOGO
+   ======================================== */
+
+/* Position is relative to the whole hero, not the image.
+   Change these two values to adjust its location. */
+#home.hero-immersive.hero-lantern.hero-lantern {
+  --art-logo-left: 73%;
+  --art-logo-top: 68%;
+}
+
+/* This wrapper controls placement.
+   The inner badge remains free to move with the mouse. */
+#home.hero-immersive.hero-lantern.hero-lantern .hero-art-logo-position {
+  position: absolute;
+  left: var(--art-logo-left);
+  top: var(--art-logo-top);
+  z-index: 2;
+
+  width: clamp(140px, 15vw, 210px);
+  margin: 0;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+#home.hero-immersive.hero-lantern.hero-lantern .hero-art-logo-position .floating-logo-badge {
+  display: block;
+
+  width: 100%;
+  height: auto;
+  margin: 0;
+
+  pointer-events: none;
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
+
+#home.hero-immersive.hero-lantern.hero-lantern .hero-art-logo-position .interactive-logo {
+  display: block;
+
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+
+  object-fit: contain;
+  filter: none;
+}
+
+/* Mobile: put the logo in the normal layout below the button,
+   rather than risk covering the text or lantern. */
+@media (max-width: 767px) {
+  #home.hero-immersive.hero-lantern.hero-lantern .hero-art-logo-position {
+    position: relative;
+    left: auto;
+    top: auto;
+    order: 3;
+
+    width: 130px;
+    margin: 0 28px 30px auto;
+
+    transform: none;
+  }
+}
+
+/* Keep the logo still for visitors requesting reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  #home.hero-immersive.hero-lantern.hero-lantern .hero-art-logo-position .floating-logo-badge {
+    transform: none !important;
+    transition: none !important;
+    will-change: auto;
+  }
+}
+
+
+/* ========================================
+   HERO LOGO — LEFT-ALIGNED ABOVE NAME
+   ======================================== */
+
+#home.hero-immersive.hero-lantern.hero-lantern .hero-art-logo-position {
+  position: relative;
+  inset: auto;
+  order: initial;
+
+  width: 180px;
+  max-width: 100%;
+  margin: 0 0 24px;
+
+  transform: none;
+  pointer-events: none;
+}
+
+#home.hero-immersive.hero-lantern.hero-lantern .hero-art-logo-position .floating-logo-badge {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+#home.hero-immersive.hero-lantern.hero-lantern .hero-art-logo-position .interactive-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: none;
+}
+
+@media (max-width: 767px) {
+  #home.hero-immersive.hero-lantern.hero-lantern .hero-art-logo-position {
+    width: 140px;
+    margin: 0 0 20px;
+  }
+}
+
+/* ========================================
+   PAINTING THEME — NAVIGATION
+   ======================================== */
+
+#header .brand-header,
+#header.sticky .brand-header,
+#header #materialize-menu,
+body.lantern-theme #header .brand-header,
+body.lantern-theme #header.sticky .brand-header,
+body.lantern-theme #header #materialize-menu {
+  background-color: #141122 !important;
+}
+
+#header .menuzord-menu,
+body.lantern-theme #header .menuzord-menu {
+  background-color: #141122 !important;
+}
+
+#header .logo-brand .nav-wordmark,
+#header .menuzord-menu > li > a,
+body.lantern-theme #header .logo-brand .nav-wordmark,
+body.lantern-theme #header .menuzord-menu > li > a {
+  color: #f6f1f7 !important;
+}
+
+#header .menuzord-menu > li:hover > a,
+#header .menuzord-menu > li.active > a,
+#header .menuzord-menu > li > a:focus,
+body.lantern-theme #header .menuzord-menu > li:hover > a,
+body.lantern-theme #header .menuzord-menu > li.active > a,
+body.lantern-theme #header .menuzord-menu > li > a:focus {
+  color: #f6f1f7 !important;
+
+  text-decoration: underline;
+  text-decoration-color: #c58c93;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+#header .menuzord .showhide em,
+body.lantern-theme #header .menuzord .showhide em {
+  background-color: #f6f1f7 !important;
+}
+
+#header a:focus-visible,
+body.lantern-theme #header a:focus-visible {
+  outline: 3px solid #c58c93;
+  outline-offset: 4px;
+}
+
+
+/* ========================================
+   NAVIGATION GEODE — SMALL VERTICAL ADJUSTMENT
+   Does not affect the moving hero logo.
+   ======================================== */
+
+#header .logo-brand .nav-logo,
+body.lantern-theme #header .logo-brand .nav-logo {
+  position: relative;
+  top: 6px;
+}
+
+
+/* ========================================
+   PAINTING THEME — OTHER ACTION BUTTONS
+   ======================================== */
+
+#artist-statement .statement-button,
+#experience .experience-download-button,
+#contact button[type="submit"],
+#site-footer .back-top,
+body.lantern-theme #artist-statement .statement-button,
+body.lantern-theme #experience .experience-download-button,
+body.lantern-theme #contact button[type="submit"],
+body.lantern-theme #site-footer .back-top {
+  background-color: #715f89 !important;
+  color: #ffffff !important;
+
+  border: 2px solid transparent;
+
+  box-shadow: none !important;
+  transform: none !important;
+
+  text-decoration: none;
+  text-transform: none;
+
+  transition: background-color 0.18s ease;
+}
+
+#artist-statement .statement-button:hover,
+#artist-statement .statement-button:focus,
+#experience .experience-download-button:hover,
+#experience .experience-download-button:focus,
+#contact button[type="submit"]:hover,
+#contact button[type="submit"]:focus,
+#site-footer .back-top:hover,
+#site-footer .back-top:focus,
+body.lantern-theme #artist-statement .statement-button:hover,
+body.lantern-theme #artist-statement .statement-button:focus,
+body.lantern-theme #experience .experience-download-button:hover,
+body.lantern-theme #experience .experience-download-button:focus,
+body.lantern-theme #contact button[type="submit"]:hover,
+body.lantern-theme #contact button[type="submit"]:focus,
+body.lantern-theme #site-footer .back-top:hover,
+body.lantern-theme #site-footer .back-top:focus {
+  background-color: #65537d !important;
+  color: #ffffff !important;
+
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+#artist-statement .statement-button:active,
+#experience .experience-download-button:active,
+#contact button[type="submit"]:active,
+#site-footer .back-top:active,
+body.lantern-theme #artist-statement .statement-button:active,
+body.lantern-theme #experience .experience-download-button:active,
+body.lantern-theme #contact button[type="submit"]:active,
+body.lantern-theme #site-footer .back-top:active {
+  background-color: #57466e !important;
+  color: #ffffff !important;
+}
+
+#artist-statement .statement-button:focus-visible,
+#experience .experience-download-button:focus-visible,
+#contact button[type="submit"]:focus-visible,
+#site-footer .back-top:focus-visible,
+body.lantern-theme #artist-statement .statement-button:focus-visible,
+body.lantern-theme #experience .experience-download-button:focus-visible,
+body.lantern-theme #contact button[type="submit"]:focus-visible,
+body.lantern-theme #site-footer .back-top:focus-visible {
+  outline: 3px solid #141122 !important;
+  outline-offset: 5px;
+  box-shadow: 0 0 0 5px #ffffff !important;
+}
+
+#site-footer .back-top .material-icons,
+body.lantern-theme #site-footer .back-top .material-icons {
+  color: #ffffff !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #artist-statement .statement-button,
+  #experience .experience-download-button,
+  #contact button[type="submit"],
+  #site-footer .back-top,
+  body.lantern-theme #artist-statement .statement-button,
+  body.lantern-theme #experience .experience-download-button,
+  body.lantern-theme #contact button[type="submit"],
+  body.lantern-theme #site-footer .back-top {
+    transition: none !important;
+  }
+}
+
+/* ========================================
+   PAINTING THEME — SECTIONS AND ACCENTS
+   ======================================== */
+
+/* Light reading areas. */
+#works.grey.lighten-3,
+#about.grey.lighten-3,
+#contact.grey.lighten-3,
+#experience.experience-section,
+body.lantern-theme #works.grey.lighten-3,
+body.lantern-theme #about.grey.lighten-3,
+body.lantern-theme #contact.grey.lighten-3,
+body.lantern-theme #experience.experience-section {
+  background-color: #f7f5f2 !important;
+}
+
+/* Dark headings on light surfaces. */
+#works #works-title,
+#about #about-title,
+#experience #experience-title,
+body.lantern-theme #works #works-title,
+body.lantern-theme #about #about-title,
+body.lantern-theme #experience #experience-title {
+  color: #291b35 !important;
+  text-transform: none !important;
+}
+
+/* Muted-purple heading dividers. */
+#works #works-title::after,
+#about #about-title::after,
+#experience #experience-title::after,
+body.lantern-theme #works #works-title::after,
+body.lantern-theme #about #about-title::after,
+body.lantern-theme #experience #experience-title::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 2px;
+  margin-top: 18px;
+  background-color: #715f89;
+  border-radius: 2px;
+}
+
+#works #works-title::after,
+body.lantern-theme #works #works-title::after {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Restore purple project links if they were changed to brown. */
+#works .project-link a,
+body.lantern-theme #works .project-link a {
+  color: #59456f !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+#works .project-link a:hover,
+#works .project-link a:focus,
+body.lantern-theme #works .project-link a:hover,
+body.lantern-theme #works .project-link a:focus {
+  color: #403052 !important;
+}
+
+/* Selected gallery category. */
+#works .portfolio-filter li.active,
+#works .portfolio-filter li.active > button,
+body.lantern-theme #works .portfolio-filter li.active,
+body.lantern-theme #works .portfolio-filter li.active > button {
+  background-color: #715f89 !important;
+  color: #ffffff !important;
+}
+
+#works .portfolio-filter li > button:focus-visible,
+body.lantern-theme #works .portfolio-filter li > button:focus-visible {
+  outline: 3px solid #59456f;
+  outline-offset: 3px;
+}
+
+/* Dark statement band, without changing the separate statement page. */
+#artist-statement.artist-statement-band,
+body.lantern-theme #artist-statement.artist-statement-band {
+  background-color: #141122 !important;
+  border-color: #4b405b;
+}
+
+#artist-statement #artist-statement-title,
+body.lantern-theme #artist-statement #artist-statement-title {
+  color: #c58c93 !important;
+}
+
+#artist-statement .statement-quote p,
+body.lantern-theme #artist-statement .statement-quote p {
+  color: #f6f1f7 !important;
+}
+
+#artist-statement .statement-placeholder,
+#artist-statement .statement-attribution,
+body.lantern-theme #artist-statement .statement-placeholder,
+body.lantern-theme #artist-statement .statement-attribution {
+  color: #d2c7da !important;
+}
+
+/* ========================================
+   PAINTING THEME — FOOTER
+   ======================================== */
+
+#site-footer .primary-footer.brand-bg,
+body.lantern-theme #site-footer .primary-footer.brand-bg {
+  background-color: #141122 !important;
+}
+
+#site-footer .secondary-footer.brand-bg.darken-2,
+body.lantern-theme #site-footer .secondary-footer.brand-bg.darken-2 {
+  background-color: #0f0c19 !important;
+}
+
+#site-footer .footer-name,
+#site-footer .footer-tagline,
+#site-footer .footer-contact-list li,
+#site-footer .footer-link-list li,
+#site-footer .footer-contact-list a,
+#site-footer .footer-link-list a,
+#site-footer .copy-text,
+#site-footer .back-to-top-text,
+body.lantern-theme #site-footer .footer-name,
+body.lantern-theme #site-footer .footer-tagline,
+body.lantern-theme #site-footer .footer-contact-list li,
+body.lantern-theme #site-footer .footer-link-list li,
+body.lantern-theme #site-footer .footer-contact-list a,
+body.lantern-theme #site-footer .footer-link-list a,
+body.lantern-theme #site-footer .copy-text,
+body.lantern-theme #site-footer .back-to-top-text {
+  color: #f6f1f7 !important;
+}
+
+#site-footer .footer-title,
+body.lantern-theme #site-footer .footer-title {
+  color: #d2c7da !important;
+  border-bottom-color: #51445f;
+}
+
+#site-footer .footer-brand-row,
+body.lantern-theme #site-footer .footer-brand-row {
+  border-bottom-color: #51445f;
+}
+
+#site-footer .footer-contact-list a:hover,
+#site-footer .footer-link-list a:hover,
+#site-footer .footer-name:hover,
+#site-footer .back-to-top-text:hover,
+body.lantern-theme #site-footer .footer-contact-list a:hover,
+body.lantern-theme #site-footer .footer-link-list a:hover,
+body.lantern-theme #site-footer .footer-name:hover,
+body.lantern-theme #site-footer .back-to-top-text:hover {
+  color: #c58c93 !important;
+}
+
+#site-footer a:focus-visible,
+body.lantern-theme #site-footer a:focus-visible {
+  outline-color: #f6f1f7;
+}
+
+
+/* ========================================
+   SELECTED WORKS — COORDINATED FILTER STATES
+   ======================================== */
+
+/* Hover or keyboard focus: pale lavender with dark text. */
+body #works .portfolio-filter li:hover,
+body #works .portfolio-filter li:focus-within {
+  background-color: #e8e1ee !important;
+  color: #403052 !important;
+}
+
+body #works .portfolio-filter li:hover > button,
+body #works .portfolio-filter li > button:hover,
+body #works .portfolio-filter li > button:focus {
+  background-color: transparent !important;
+  color: #403052 !important;
+}
+
+/* Selected category: painting purple with white text.
+   Keep this appearance even while hovering over it. */
+body #works .portfolio-filter li.active,
+body #works .portfolio-filter li.active:hover,
+body #works .portfolio-filter li.active:focus-within {
+  background-color: #715f89 !important;
+  color: #ffffff !important;
+}
+
+body #works .portfolio-filter li.active > button,
+body #works .portfolio-filter li.active:hover > button,
+body #works .portfolio-filter li.active > button:hover,
+body #works .portfolio-filter li.active > button:focus {
+  background-color: transparent !important;
+  color: #ffffff !important;
+}
+
+/* Visible keyboard focus. */
+body #works .portfolio-filter li > button:focus-visible {
+  outline: 3px solid #403052 !important;
+  outline-offset: 3px;
+}
+
+/* Coordinate the click ripple with the purple palette. */
+body #works .portfolio-filter li .waves-ripple {
+  background: rgba(113, 95, 137, 0.22) !important;
+}
+
+/* ========================================
+   FULL-WIDTH PAINTING HERO — NEW IMAGE TEST
+   Keep this block after all previous hero CSS.
+   ======================================== */
+
+/* Use the image itself to establish the hero's proportions.
+   Do not force a full-screen-height crop. */
+#home.banner-15.hero-immersive.hero-lantern.hero-lantern.hero-wide-test {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto;
+  align-items: stretch;
+  isolation: isolate;
+
+  width: 100%;
+  height: auto !important;
+  min-height: 0 !important;
+
+  margin: 0;
+  padding: 0 !important;
+
+  overflow: hidden;
+
+  background-image: none !important;
+  background-color: #141122 !important;
+}
+
+/* Remove the previous section-wide overlays. */
+#home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test::before,
+#home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test::after {
+  content: none !important;
+}
+
+/* Entire image, full width, no cropping or stretching. */
+#home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-painting {
+  grid-area: 1 / 1;
+
+  display: block;
+  align-self: center;
+
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+
+  margin: 0;
+  padding: 0;
+
+  position: relative;
+  z-index: 0;
+}
+
+/* Introduction shares the image's grid area.
+   This is the main desktop positioning control. */
+#home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-introduction {
+  grid-area: 1 / 1;
+
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-sizing: border-box;
+  min-width: 0;
+
+  padding: 125px 0 55px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20, 17, 34, 0.72) 0%,
+      rgba(20, 17, 34, 0.46) 35%,
+      rgba(20, 17, 34, 0) 65%
+    );
+}
+
+/* Shared left alignment for the introduction and button. */
+#home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-content,
+#home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-action {
+  position: relative;
+  flex: 0 0 auto;
+
+  box-sizing: border-box;
+  max-width: 100%;
+
+  padding-left: 50px !important;
+  padding-right: 30px !important;
+
+  text-align: left;
+}
+
+/* Remove old vertical offsets. */
+#home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-content {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-heading {
+  width: 100%;
+  max-width: 570px;
+  margin: 0;
+}
+
+/* Logo remains above the name and moves independently. */
+#home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-art-logo-position {
+  position: relative;
+  inset: auto;
+  order: initial;
+
+  width: 155px;
+  max-width: 100%;
+
+  margin: 0 0 18px;
+  transform: none;
+  pointer-events: none;
+}
+
+#home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .floating-logo-badge {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+
+  transition: transform 0.15s ease-out;
+}
+
+#home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .interactive-logo {
+  display: block;
+
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+
+  object-fit: contain;
+  filter: none;
+}
+
+/* Slightly smaller introduction leaves more painting visible. */
+#home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-title {
+  margin: 0 0 18px;
+
+  color: #fff8ec !important;
+  font-size: clamp(38px, 4vw, 60px);
+  line-height: 1.12;
+  text-transform: none;
+
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+}
+
+#home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-subtitle {
+  max-width: 480px;
+  margin: 0;
+
+  color: #f6f1f7 !important;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+/* Button stays aligned below the subtitle. */
+#home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-action {
+  padding-top: 24px !important;
+  padding-bottom: 0 !important;
+}
+
+/* Tablet and mobile: show the painting above the introduction.
+   Do not squeeze the whole composition behind the text. */
+@media (max-width: 991px) {
+  #home.banner-15.hero-immersive.hero-lantern.hero-lantern.hero-wide-test {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-painting {
+    flex: 0 0 auto;
+    align-self: auto;
+  }
+
+  #home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-introduction {
+    flex: 0 0 auto;
+    width: 100%;
+
+    padding: 36px 0 44px;
+    background: #141122;
+  }
+
+  #home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-content,
+  #home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-action {
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+  }
+
+  #home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-art-logo-position {
+    width: 140px;
+    margin: 0 0 18px;
+  }
+
+  #home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-title {
+    font-size: clamp(36px, 6vw, 48px);
+  }
+
+  #home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .floating-logo-badge {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ========================================
+   SHRUNK HEADER — REMOVE GEODE DOWNWARD OFFSET
+   ======================================== */
+
+#header.sticky .logo-brand .nav-logo,
+body.lantern-theme #header.sticky .logo-brand .nav-logo {
+  top: 0 !important;
+}
+
+
+/* ========================================
+   WIDE HERO — ALIGN INTRODUCTION FARTHER LEFT
+   ======================================== */
+
+@media (min-width: 992px) {
+  #home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-content,
+  #home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-action {
+    padding-left: 15px !important;
+  }
+}
+
+/* ========================================
+   SMALL-SCREEN HERO — TOP CLEARANCE
+   ======================================== */
+
+@media (max-width: 991px) {
+  #home.banner-15.hero-immersive.hero-lantern.hero-lantern.hero-wide-test {
+    padding-top: 60px !important;
+  }
+}
+
+/* ========================================
+   FROSTED GLASS CONTAINER & CUTOUT GLOW
+   ======================================== */
+
+#home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-art-logo-position .floating-logo-badge {
+  background: rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  border-radius: 16px !important;
+  padding: 12px !important;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
+}
+
+#home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-art-logo-position .interactive-logo {
+  filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.5)) 
+          drop-shadow(0px 0px 8px rgba(255, 200, 120, 0.2)) !important;
+
+      
+}
+
+
+
+/* ========================================
+   HERO LOGO — LARGER, GLOW ONLY, NO GLASS
+   ======================================== */
+
+/* Larger logo above the name. */
+#home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-art-logo-position {
+  position: relative;
+  inset: auto;
+
+  box-sizing: border-box;
+  width: 220px !important;
+  max-width: 100%;
+  height: auto !important;
+
+  margin: 0 0 20px !important;
+  transform: none;
+}
+
+/* Remove the glass panel without disabling mouse movement. */
+#home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-art-logo-position .floating-logo-badge {
+  display: block;
+  box-sizing: border-box;
+
+  width: 100% !important;
+  max-width: 100%;
+  height: auto !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background: transparent !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Keep the glow around the transparent artwork only. */
+#home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-art-logo-position .interactive-logo {
+  display: block;
+
+  width: 100% !important;
+  max-width: 100%;
+  height: auto !important;
+
+  margin: 0;
+  padding: 0;
+
+  filter:
+    drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 0 8px rgba(255, 200, 120, 0.2))
+    !important;
+}
+
+/* Slightly smaller on tablet and phone. */
+@media (max-width: 991px) {
+  #home.hero-immersive.hero-lantern.hero-lantern.hero-wide-test .hero-art-logo-position {
+    width: 180px !important;
+  }
+}
